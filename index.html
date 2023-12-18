@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Zoom On Scroll | Parallax Effect | HTML, CSS & JQuery</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+  </head>
+  <body>
+    <div class="hero-back">
+      <header>
+        <div class="header-line"></div>
+      </header>
+      <img src="hero-front.png" alt="" />
+    </div>
+    <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cupiditate fuga natus voluptatem dolorum ab illo, quos adipisci voluptatum explicabo cumque sint neque quo sit consequatur molestiae expedita saepe harum, nobis labore, praesentium. Dicta nobis consectetur, culpa consequatur. Nisi velit aspernatur veritatis, vero iste culpa voluptates eos provident officiis placeat quis voluptas magnam animi neque rem nam sint tempore, amet aut libero? Dignissimos quisquam autem eos. Fuga, incidunt temporibus id sit. Iusto labore animi a deleniti magni sequi incidunt at maiores harum sed quo accusantium aperiam, officiis architecto ducimus consequuntur distinctio doloremque numquam esse consectetur velit beatae. Sequi perspiciatis, inventore.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quidem veniam dolor ducimus explicabo est dignissimos ad velit minima qui.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sint eaque voluptatem praesentium beatae, voluptatum labore nisi assumenda, quaerat tempore iure modi accusantium quia distinctio error architecto illum nemo. Explicabo in molestiae recusandae tempora placeat distinctio, est quibusdam voluptatem voluptatibus nemo debitis officia vel voluptates quo, vero et, reprehenderit magnam!</p>
+    </div>
+
+    <script type="text/javascript">
+
+      $(window).scroll(function() {
+            var scrollPos = $(this).scrollTop();
+            $(".hero-back").css({
+                  'background-size' : 100 + scrollPos + '%'      
+            });
+      });
+z
+      </script>
+
+    <h1>Countdown Clock</h1>
+    <div id="clockdiv">
+      <div>
+        <!-- Show No. of days -->
+        <span class="days" id="day"></span>
+        <div class="smalltext">Days</div>
+      </div>
+      <div>
+        <!-- Show no.of hours -->
+        <span class="hours" id="hour"></span>
+        <div class="smalltext">Hours</div>
+      </div>
+      <div>
+        <!-- Show no. of minutes -->
+        <span class="minutes" id="minute"></span>
+        <div class="smalltext">Minutes</div>
+      </div>
+      <div>
+        <!-- Show seconds -->
+        <span class="seconds" id="second"></span>
+        <div class="smalltext">Seconds</div>
+      </div>
+    </div>
+    <p id="demo"></p>
+
+    <script>
+      // Getting formated date from date string
+      let deadline = new Date("dec 31, 2023 15:37:25").getTime();
+
+      // Calling defined function at certain interval
+      let x = setInterval(function () {
+        // Getting current date and time in required format
+        let now = new Date().getTime();
+
+        // Calculating difference
+        let t = deadline - now;
+
+        // Getting values of days,hours,minutes, seconds
+        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((t % (1000 * 60)) / 1000);
+
+        // Show the output time
+        document.getElementById("day").innerHTML = days;
+        document.getElementById("hour").innerHTML = hours;
+        document.getElementById("minute").innerHTML = minutes;
+        document.getElementById("second").innerHTML = seconds;
+
+        // Show overtime output
+        if (t < 0) {
+          clearInterval(x);
+          document.getElementById("demo").innerHTML = "TIME UP";
+          document.getElementById("day").innerHTML = "0";
+          document.getElementById("hour").innerHTML = "0";
+          document.getElementById("minute").innerHTML = "0";
+          document.getElementById("second").innerHTML = "0";
+        }
+      }, 1000);
+    </script>
+    <button class="button-26" role="button">Register Now</button>
+  </body>
+</html>
