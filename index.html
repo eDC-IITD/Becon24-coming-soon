@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Zoom On Scroll | Parallax Effect | HTML, CSS & JQuery</title>
     <link rel="stylesheet" href="main.css" />
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
   </head>
   <body>
@@ -16,82 +17,87 @@
       <img src="hero-front.png" alt="" />
     </div>
     <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa cupiditate fuga natus voluptatem dolorum ab illo, quos adipisci voluptatum explicabo cumque sint neque quo sit consequatur molestiae expedita saepe harum, nobis labore, praesentium. Dicta nobis consectetur, culpa consequatur. Nisi velit aspernatur veritatis, vero iste culpa voluptates eos provident officiis placeat quis voluptas magnam animi neque rem nam sint tempore, amet aut libero? Dignissimos quisquam autem eos. Fuga, incidunt temporibus id sit. Iusto labore animi a deleniti magni sequi incidunt at maiores harum sed quo accusantium aperiam, officiis architecto ducimus consequuntur distinctio doloremque numquam esse consectetur velit beatae. Sequi perspiciatis, inventore.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Recusandae quidem veniam dolor ducimus explicabo est dignissimos ad velit minima qui.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sint eaque voluptatem praesentium beatae, voluptatum labore nisi assumenda, quaerat tempore iure modi accusantium quia distinctio error architecto illum nemo. Explicabo in molestiae recusandae tempora placeat distinctio, est quibusdam voluptatem voluptatibus nemo debitis officia vel voluptates quo, vero et, reprehenderit magnam!</p>
+            <p>The Entrepreneurship Development Cell at IIT Delhi serves as a dedicated hub fostering a culture of innovation and enterprise among the student community. Its mission is to empower aspiring student entrepreneurs, providing essential resources to transform visionary ideas into impactful ventures. From engaging competitions like Muskeeters and Mad for Ad to thought-provoking seminars and immersive workshops, it provides a vibrant space for students to explore, learn, and collaborate. This community thrives on entrepreneurial spirit, making it a space where ideas find wings. for eDC
+              BECon'24, the flagship Annual Business and Entrepreneurship Conclave at IIT Delhi, asserts its prominence with the 2024 edition on February 3rd and 4th. Anticipating a staggering footfall of 1 lakh+ attendees, BECon serves as India's foremost entrepreneurship conference, creating a dynamic platform for the exchange of ideas among business experts, entrepreneurs, and change-makers.</p>
+              
+            <p>More than a conventional conference, BECon 2024 is a nexus of inspiration and collaboration, uniting students and aspiring change-makers in the pursuit of groundbreaking concepts and innovative solutions. The event's rich lineup of competitions seamlessly connects young talents with the corporate world, shaping an environment where ideas flourish and innovation takes center stage.
+              
+              Beyond the entrepreneurial hustle, BECon is a celebration of creativity and joy. Amidst groundbreaking discussions and intense competitions, we also immerse ourselves in the rhythm of dance and other exhilarating activities. Join us at BECon, where innovation meets enjoyment, and every moment is a celebration of success, passion, and the sheer joy of connecting!
+              </p>
     </div>
 
-    <script type="text/javascript">
+  <div class="container mt-5">
+    <div class="row">
+      <div class="col-sm-12">
+        <div id="countdown" class="text-center mt-4"></div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript"> 
 
-      $(window).scroll(function() {
-            var scrollPos = $(this).scrollTop();
-            $(".hero-back").css({
-                  'background-size' : 100 + scrollPos + '%'      
-            });
-      });
+    $(window).scroll(function() {
+          var scrollPos = $(this).scrollTop();
+          $(".hero-back").css({
+                'background-size' : 100 + scrollPos + '%'      
+          });
+    });
 z
-      </script>
-
-    <h1>Countdown Clock</h1>
-    <div id="clockdiv">
-      <div>
-        <!-- Show No. of days -->
-        <span class="days" id="day"></span>
-        <div class="smalltext">Days</div>
-      </div>
-      <div>
-        <!-- Show no.of hours -->
-        <span class="hours" id="hour"></span>
-        <div class="smalltext">Hours</div>
-      </div>
-      <div>
-        <!-- Show no. of minutes -->
-        <span class="minutes" id="minute"></span>
-        <div class="smalltext">Minutes</div>
-      </div>
-      <div>
-        <!-- Show seconds -->
-        <span class="seconds" id="second"></span>
-        <div class="smalltext">Seconds</div>
-      </div>
-    </div>
-    <p id="demo"></p>
-
-    <script>
-      // Getting formated date from date string
-      let deadline = new Date("dec 31, 2023 15:37:25").getTime();
-
-      // Calling defined function at certain interval
-      let x = setInterval(function () {
-        // Getting current date and time in required format
-        let now = new Date().getTime();
-
-        // Calculating difference
-        let t = deadline - now;
-
-        // Getting values of days,hours,minutes, seconds
-        let days = Math.floor(t / (1000 * 60 * 60 * 24));
-        let hours = Math.floor((t % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        let minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
-        let seconds = Math.floor((t % (1000 * 60)) / 1000);
-
-        // Show the output time
-        document.getElementById("day").innerHTML = days;
-        document.getElementById("hour").innerHTML = hours;
-        document.getElementById("minute").innerHTML = minutes;
-        document.getElementById("second").innerHTML = seconds;
-
-        // Show overtime output
-        if (t < 0) {
-          clearInterval(x);
-          document.getElementById("demo").innerHTML = "TIME UP";
-          document.getElementById("day").innerHTML = "0";
-          document.getElementById("hour").innerHTML = "0";
-          document.getElementById("minute").innerHTML = "0";
-          document.getElementById("second").innerHTML = "0";
-        }
-      }, 1000);
     </script>
-    <button class="button-26" role="button">Register Now</button>
+
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    // Set the date to countdown to (replace with your desired date)
+    const countDownDate = new Date("December 30, 2023 23:59:59").getTime();
+
+    const countdownElement = document.getElementById("countdown");
+
+    const countdownFunction = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+
+      countdownElement.innerHTML = `
+      <div class="row">
+        <div class="col">
+          <div class="display-4">${days}</div>
+          <div>Days</div>
+        </div>
+        <div class="col">
+          <div class="display-4">${hours}</div>
+          <div>Hours:</div>
+        </div>
+        <div class="col">
+          <div class="display-4">${minutes}</div>
+          <div>Minutes:</div>
+        </div>
+        <div class="col">
+          <div class="display-4">${seconds}</div>
+          <div>Seconds:</div>
+        </div>
+      </div>
+    `;
+
+      if (distance < 0) {
+        clearInterval(countdownFunction);
+        countdownElement.innerHTML = "EXPIRED";
+      }
+    },1000);
+  </script>
+       <div class="container mt-3">
+        <div class="row justify-content-center">
+          <button class="button-26" role="button">Register Now</button>
+        </div>
+      </div>
+  
+
   </body>
 </html>

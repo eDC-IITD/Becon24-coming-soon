@@ -152,3 +152,70 @@ h1 {
   background-color: #0039D7;
   border-color: #0039D7;
 }
+/* .col{
+   color: blueviolet;
+   margin: 10px;
+   margin-left: 100px;
+   margin-right: 100px;
+   word-spacing: 40px;
+}
+.row{
+  margin: 20px;
+} */
+/*working area------------------------>
+/* Your existing CSS */
+
+/* ... (your existing styles) */
+
+#countdown {
+  font-family: sans-serif;
+  color: #fff;
+  text-align: center;
+  font-size: 2vw;
+  margin-block-end: 3%;
+}
+
+#countdown > div {
+  padding: 10px;
+  border-radius: 1.6vw;
+  background: #00bf96;
+  display: inline-flex;
+  margin: 5px;
+}
+
+#countdown div > span {
+  padding: 0.7vw;
+  border-radius: 1.4vw;
+  background: #00816a;
+  display: inline-block;
+}
+
+.smalltext {
+  font-size: 1.9vw;
+}
+
+.button-26 {
+  appearance: button;
+  background-color: #253f82;
+  border: 1px solid #0540d5;
+  border-radius: 4px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  font-family: Graphik, -apple-system, system-ui, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  line-height: 1.15;
+  overflow: visible;
+  padding: 12px 16px;
+  text-align: center;
+  text-transform: none;
+  transition: all 80ms ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 100%; /* Make the button take up 100% of its container */
+  max-width: 150px; /* Set a maximum width if needed */
+  margin: 10px; /* Adjust margin as needed */
+}
+
