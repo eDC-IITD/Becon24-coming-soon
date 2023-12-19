@@ -168,7 +168,7 @@ h1 {
 /* ... (your existing styles) */
 
 #countdown {
-  font-family: sans-serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: #fff;
   text-align: center;
   font-size: 2vw;
@@ -178,7 +178,7 @@ h1 {
 #countdown > div {
   padding: 10px;
   border-radius: 1.6vw;
-  background: #00bf96;
+  background:black;
   display: inline-flex;
   margin: 5px;
 }
